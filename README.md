@@ -1,17 +1,21 @@
 # Brunch app
 
-This is HTML5 application, built with [Brunch](http://brunch.io).
-
-## Getting started
-* Install (if you don't have them):
-    * [Node.js](http://nodejs.org): `brew install node` on OS X
-    * [Brunch](http://brunch.io): `npm install -g brunch`
-    * [Bower](http://bower.io): `npm install -g bower`
-    * Brunch plugins and Bower dependencies: `npm install & bower install`.
-* Run:
-    * `brunch watch --server` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
-    * `brunch build --production` — builds minified project for production
-* Learn:
-    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
-    * Place static files you want to be copied from `app/assets/` to `public/`.
-    * [Brunch site](http://brunch.io), [Chaplin site](http://chaplinjs.org)
+## To see them problem
+* Clone this repo
+* Ensure you're using brunch v. 1.7.14 (brunch --version)
+* Run ```bower install```
+* Run ```brunch b```
+Observe, this error is encountered:
+```
+/usr/local/lib/node_modules/brunch/node_modules/read-components/index.js:108
+    pkg[property].forEach(function(item) {
+                  ^
+TypeError: Object #<Object> has no method 'forEach'
+  at /usr/local/lib/node_modules/brunch/node_modules/read-components/index.js:108:19
+  at Array.forEach (native)
+  at exports.getPackageFiles (/usr/local/lib/node_modules/brunch/node_modules/read-components/index.js:107:13)
+  at /usr/local/lib/node_modules/brunch/node_modules/read-components/index.js:138:19
+  at /usr/local/lib/node_modules/brunch/node_modules/read-components/index.js:87:7
+  at fs.js:266:14
+  at Object.oncomplete (fs.js:107:15)
+```
